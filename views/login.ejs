@@ -1,3 +1,10 @@
+<% if(typeof error != 'undefined') { %>
+<%- include('partials/message') %>
+<% } %>
+<% if(typeof success_msg != 'undefined') { %>
+<%- include('partials/success') %>
+<% } %>
+
 <div class="card text-white bg-info mb-3" style="max-width: 20rem;">
     <div class="card-body">
         <h4 class="card-title">LOGIN HERE</h4>

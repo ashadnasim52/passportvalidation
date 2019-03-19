@@ -2,6 +2,10 @@
 <%- include('partials/message') %>
 <% } %>
 
+<% if(typeof success_msg != 'undefined') { %>
+<%- include('partials/success') %>
+<% } %>
+
 <div class="card text-white bg-info mb-3" style="max-width: 20rem;">
     <div class="card-body">
         <h4 class="card-title">Register here </h4>
@@ -24,7 +28,7 @@
             </div>
             <div class="form-group has-success">
                 <label class="form-control-label" for="password2">password2</label>
-                <input type="password class=" form-control is-valid" id="inputValid" name="password2" value="<%= typeof password2 !='undefined'
+                <input type="password" class="form-control is-valid" id="inputValid" name="password2" value="<%= typeof password2 !='undefined'
                     ? password2 : '' %>">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
